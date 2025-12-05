@@ -1,0 +1,555 @@
+{
+  "info": {
+    "_postman_id": "leave-management-api",
+    "name": "Leave Management System API",
+    "description": "Complete API collection for Leave Management System with Employees, Leaves, and Leave Balances management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Employees",
+      "item": [
+        {
+          "name": "Get All Employees",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/employees",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "employees"
+              ]
+            },
+            "description": "Retrieve all employees from the system"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Employee By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/employees/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                "1"
+              ]
+            },
+            "description": "Retrieve a specific employee by their ID"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Employee",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Alice\",\n  \"lastName\": \"Johnson\",\n  \"email\": \"alice.johnson@company.com\",\n  \"department\": \"Engineering\",\n  \"joinDate\": \"2024-01-10T00:00:00\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/employees",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "employees"
+              ]
+            },
+            "description": "Create a new employee"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Employee",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Alice\",\n  \"lastName\": \"Johnson\",\n  \"email\": \"alice.johnson.updated@company.com\",\n  \"department\": \"Engineering\",\n  \"joinDate\": \"2024-01-10T00:00:00\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/employees/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                "1"
+              ]
+            },
+            "description": "Update an existing employee"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Employee",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/employees/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                "1"
+              ]
+            },
+            "description": "Delete an employee"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Leaves",
+      "item": [
+        {
+          "name": "Get All Leaves",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leaves",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leaves"
+              ]
+            },
+            "description": "Retrieve all leave requests"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Leave By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leaves/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leaves",
+                "1"
+              ]
+            },
+            "description": "Retrieve a specific leave request by ID"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Leaves by Employee",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leaves/employee/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leaves",
+                "employee",
+                "1"
+              ]
+            },
+            "description": "Get all leave requests for a specific employee"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Leaves by Status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leaves/status/Pending",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leaves",
+                "status",
+                "Pending"
+              ]
+            },
+            "description": "Get all leave requests with a specific status (Pending, Approved, Rejected)"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Leave Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employeeId\": 1,\n  \"startDate\": \"2025-04-01T00:00:00\",\n  \"endDate\": \"2025-04-05T00:00:00\",\n  \"leaveType\": \"Annual\",\n  \"reason\": \"Spring vacation\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/leaves",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leaves"
+              ]
+            },
+            "description": "Create a new leave request"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Leave Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employeeId\": 1,\n  \"startDate\": \"2025-04-01T00:00:00\",\n  \"endDate\": \"2025-04-07T00:00:00\",\n  \"leaveType\": \"Annual\",\n  \"status\": \"Approved\",\n  \"reason\": \"Spring vacation - extended\",\n  \"appliedDate\": \"2024-12-01T00:00:00\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/leaves/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leaves",
+                "3"
+              ]
+            },
+            "description": "Update an existing leave request (including approval)"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Leave Request",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leaves/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leaves",
+                "3"
+              ]
+            },
+            "description": "Delete a leave request"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Leave Balances",
+      "item": [
+        {
+          "name": "Get All Leave Balances",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leavebalances",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leavebalances"
+              ]
+            },
+            "description": "Retrieve all leave balances"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Leave Balance By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leavebalances/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leavebalances",
+                "1"
+              ]
+            },
+            "description": "Retrieve a specific leave balance by ID"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Leave Balances by Employee",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leavebalances/employee/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leavebalances",
+                "employee",
+                "1"
+              ]
+            },
+            "description": "Get all leave balances for a specific employee"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Leave Balances by Employee and Year",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leavebalances/employee/1/year/2025",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leavebalances",
+                "employee",
+                "1",
+                "year",
+                "2025"
+              ]
+            },
+            "description": "Get leave balances for a specific employee and year"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Leave Balance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employeeId\": 4,\n  \"leaveType\": \"Annual\",\n  \"totalDays\": 20,\n  \"usedDays\": 0,\n  \"remainingDays\": 20,\n  \"year\": 2026\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/leavebalances",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leavebalances"
+              ]
+            },
+            "description": "Create a new leave balance allocation"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Leave Balance",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employeeId\": 1,\n  \"leaveType\": \"Annual\",\n  \"totalDays\": 20,\n  \"usedDays\": 7,\n  \"remainingDays\": 13,\n  \"year\": 2025\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/leavebalances/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leavebalances",
+                "1"
+              ]
+            },
+            "description": "Update an existing leave balance"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Leave Balance",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/leavebalances/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "leavebalances",
+                "1"
+              ]
+            },
+            "description": "Delete a leave balance record"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5233",
+      "type": "string"
+    }
+  ]
+}

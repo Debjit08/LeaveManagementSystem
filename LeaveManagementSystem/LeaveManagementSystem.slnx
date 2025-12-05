@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DataModels/DataModels.csproj" />
+  <Project Path="DataService/DataService.csproj" />
+  <Project Path="LeaveManagementSystem/LeaveManagementSystem.csproj" />
+  <Project Path="ViewModels/ViewModels.csproj" />
+</Solution>

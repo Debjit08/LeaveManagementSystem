@@ -1,0 +1,233 @@
+{
+  "employees": [
+    {
+      "employeeId": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@company.com",
+      "department": "Engineering",
+      "joinDate": "2022-01-15T00:00:00"
+    },
+    {
+      "employeeId": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@company.com",
+      "department": "HR",
+      "joinDate": "2021-06-20T00:00:00"
+    },
+    {
+      "employeeId": 3,
+      "firstName": "Michael",
+      "lastName": "Johnson",
+      "email": "michael.johnson@company.com",
+      "department": "Finance",
+      "joinDate": "2020-03-10T00:00:00"
+    },
+    {
+      "employeeId": 4,
+      "firstName": "Emily",
+      "lastName": "Williams",
+      "email": "emily.williams@company.com",
+      "department": "Engineering",
+      "joinDate": "2023-02-01T00:00:00"
+    },
+    {
+      "employeeId": 5,
+      "firstName": "David",
+      "lastName": "Brown",
+      "email": "david.brown@company.com",
+      "department": "Marketing",
+      "joinDate": "2022-05-12T00:00:00"
+    }
+  ],
+  "leaves": [
+    {
+      "leaveId": 1,
+      "employeeId": 1,
+      "startDate": "2025-01-10T00:00:00",
+      "endDate": "2025-01-15T00:00:00",
+      "leaveType": "Annual",
+      "status": "Approved",
+      "reason": "Vacation",
+      "appliedDate": "2024-12-01T00:00:00"
+    },
+    {
+      "leaveId": 2,
+      "employeeId": 2,
+      "startDate": "2025-01-20T00:00:00",
+      "endDate": "2025-01-21T00:00:00",
+      "leaveType": "Sick",
+      "status": "Approved",
+      "reason": "Medical appointment",
+      "appliedDate": "2024-12-02T00:00:00"
+    },
+    {
+      "leaveId": 3,
+      "employeeId": 1,
+      "startDate": "2025-02-05T00:00:00",
+      "endDate": "2025-02-07T00:00:00",
+      "leaveType": "Casual",
+      "status": "Pending",
+      "reason": "Personal",
+      "appliedDate": "2024-12-03T00:00:00"
+    },
+    {
+      "leaveId": 4,
+      "employeeId": 3,
+      "startDate": "2025-01-25T00:00:00",
+      "endDate": "2025-02-01T00:00:00",
+      "leaveType": "Annual",
+      "status": "Rejected",
+      "reason": "Extended vacation",
+      "appliedDate": "2024-11-15T00:00:00"
+    },
+    {
+      "leaveId": 5,
+      "employeeId": 4,
+      "startDate": "2025-03-10T00:00:00",
+      "endDate": "2025-03-12T00:00:00",
+      "leaveType": "Annual",
+      "status": "Pending",
+      "reason": "Vacation",
+      "appliedDate": "2024-12-04T00:00:00"
+    }
+  ],
+  "leaveBalances": [
+    {
+      "leaveBalanceId": 1,
+      "employeeId": 1,
+      "leaveType": "Annual",
+      "totalDays": 20,
+      "usedDays": 5,
+      "remainingDays": 15,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 2,
+      "employeeId": 1,
+      "leaveType": "Sick",
+      "totalDays": 10,
+      "usedDays": 0,
+      "remainingDays": 10,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 3,
+      "employeeId": 1,
+      "leaveType": "Casual",
+      "totalDays": 5,
+      "usedDays": 0,
+      "remainingDays": 5,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 4,
+      "employeeId": 2,
+      "leaveType": "Annual",
+      "totalDays": 20,
+      "usedDays": 1,
+      "remainingDays": 19,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 5,
+      "employeeId": 2,
+      "leaveType": "Sick",
+      "totalDays": 10,
+      "usedDays": 0,
+      "remainingDays": 10,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 6,
+      "employeeId": 2,
+      "leaveType": "Casual",
+      "totalDays": 5,
+      "usedDays": 0,
+      "remainingDays": 5,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 7,
+      "employeeId": 3,
+      "leaveType": "Annual",
+      "totalDays": 20,
+      "usedDays": 0,
+      "remainingDays": 20,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 8,
+      "employeeId": 3,
+      "leaveType": "Sick",
+      "totalDays": 10,
+      "usedDays": 0,
+      "remainingDays": 10,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 9,
+      "employeeId": 3,
+      "leaveType": "Casual",
+      "totalDays": 5,
+      "usedDays": 0,
+      "remainingDays": 5,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 10,
+      "employeeId": 4,
+      "leaveType": "Annual",
+      "totalDays": 20,
+      "usedDays": 0,
+      "remainingDays": 20,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 11,
+      "employeeId": 4,
+      "leaveType": "Sick",
+      "totalDays": 10,
+      "usedDays": 0,
+      "remainingDays": 10,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 12,
+      "employeeId": 4,
+      "leaveType": "Casual",
+      "totalDays": 5,
+      "usedDays": 0,
+      "remainingDays": 5,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 13,
+      "employeeId": 5,
+      "leaveType": "Annual",
+      "totalDays": 20,
+      "usedDays": 0,
+      "remainingDays": 20,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 14,
+      "employeeId": 5,
+      "leaveType": "Sick",
+      "totalDays": 10,
+      "usedDays": 0,
+      "remainingDays": 10,
+      "year": 2025
+    },
+    {
+      "leaveBalanceId": 15,
+      "employeeId": 5,
+      "leaveType": "Casual",
+      "totalDays": 5,
+      "usedDays": 0,
+      "remainingDays": 5,
+      "year": 2025
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# IDE specific files
+.vscode/
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Dependencies
+packages/
+.nupkg
+
+# Environment and runtime
+.env
+.env.local
+launchSettings.json
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# NuGet
+.nuget/
+
+# User-specific files
+*.userprefs
